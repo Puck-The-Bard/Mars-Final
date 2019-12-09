@@ -18,7 +18,7 @@ export class MarsDatComponent implements OnInit{
 
   ngOnInit() 
   {
-
+    
     this.dataService.getWeather()
     .subscribe(data => {this.weather$ = data
       console.log(this.weather$);

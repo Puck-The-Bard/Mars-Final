@@ -28,3 +28,20 @@ post.save();
 res.status(201).json({
     message: "post added successfully"
 })
+
+let task = cron.schedule('*/2 * * * *', () => {
+
+    axios.get('https://jsonplaceholder.typicode.com/todos')
+     .then( (response) => {console.log(response.data);
+         //parseWeather(response.data);
+     })
+     .catch( (error) => {
+         console.log(error);
+     });
+ 
+     },{
+         scheduled: false
+     }
+ );
+ 
+ task.start();
