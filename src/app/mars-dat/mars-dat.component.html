@@ -1,0 +1,6 @@
+<H1>Mars-Dat works </H1>
+
+<ul *ngIf="Weather">
+    <li *ngFor="let Weather of WeatherResult">{{ Weather }}</li>
+</ul>
+<router-outlet></router-outlet>
