@@ -17,7 +17,12 @@ mongoose.connect("mongodb+srv://ZM4382:MongoUsrPass2019*@backendclasscluster-0io
 
 
 app.post("/api/posts", (req, res, next) => {
-    const post = new post.get({apiConnect})
+    const post = new Post({
+        id: req.id,
+        id: req.title,
+        completed: req.completed
+
+    })
 });
 post.save();
 res.status(201).json({

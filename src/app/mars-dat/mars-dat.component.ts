@@ -20,8 +20,8 @@ export class MarsDatComponent implements OnInit{
   {
 
     this.dataService.getWeather()
-    .subscribe(data => {this.WeatherResult = data
-      console.log(this.WeatherResult);
+    .subscribe(data => {this.weather$ = data
+      console.log(this.weather$);
     });
     
     

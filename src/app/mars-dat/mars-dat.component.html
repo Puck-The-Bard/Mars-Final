@@ -1,6 +1,5 @@
-<H1>Mars-Dat works </H1>
+<H1>Fake ToDo list because the NASA api wouldn't cooperate </H1>
 
-<ul *ngIf="Weather">
-    <li *ngFor="let Weather of WeatherResult">{{ Weather }}</li>
-</ul>
+<li *ngFor="let weather of weather$">{{weather.id }} - {{ weather.title }} - Completed: {{ weather.completed }}</li>
+
 <router-outlet></router-outlet>

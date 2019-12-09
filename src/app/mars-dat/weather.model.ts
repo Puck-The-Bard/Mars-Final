@@ -1,4 +1,5 @@
 export class Weather {
-    AT: string;
-    id: string;
+    title: string;
+    id: number;
+    completed: string;
 }
