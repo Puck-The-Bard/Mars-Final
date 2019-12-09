@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/dist/Marsfinal'));
 
 app.get('*', function(req,res) {
 
-    res.sendfile(Path.join(__dirname + '/dist/MarsFinal/app.component.html'));
+    res.sendfile(Path.join(__dirname + '/dist/MarsFinal/index.html'));
 });
 
 app.listen(process.env.PORT || 8080);
